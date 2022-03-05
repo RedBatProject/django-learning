@@ -1,0 +1,72 @@
+willywork1997 9904274Skype@
+
+
+
+django-admin startproject (name)   #this will manage every things for you and ofcourse 				    the folders.
+
+python manage.py startapp          # add apps (for more information contact us)
+
+
+
+
+https://youtu.be/fOukA4Qh9QA
+
+https://www.youtube.com/watch?v=YZvRrldjf1Y
+
+https://www.youtube.com/watch?v=Fzlg95lrILk
+
+https://www.youtube.com/watch?v=U_dDY7TvJ4E&list=RDQMIugBh0EHCn4&start_radio=1
+
+https://www.youtube.com/watch?v=6dcnH5rls4s
+
+https://www.youtube.com/watch?v=dQk3IPiq9t8&list=PLTgRMOcmRb3OTgPABSz224V2UWceiZSVN
+
+
+I added some html to heroku it works fine ---> go for another settings....
+
+in case of having some trubbles
+look here
+
+1 : you must indtall django and django-heroku (the heroku one will do everythings for you)
+2: then pyth
+
+
+wait a secends
+
+look here
+pip install virtualenv (virtual environments)
+python -m venv ./venv --prompt (name of the virtual)
+To activate it .\name\scripts\activate.bat
+python -m pip install django django-heroku gunicorn (gunicorn is for displaying your app)
+python -m pip freeze > requirements.txt
+python django startproject (name of the projects)
+
+then in settings:
+	import django_heroku
+	django_heroku.settings(locals())
+	and add STATIC_ROOT = 'staticfiles'
+
+and you will need a file named Procfile and it must have ( web: gunicorn (name of project).wsgi
+
+for more information --> https://devcenter.heroku.com/articles/django-app-configuration
+
+sometings about git 
+
+git init
+git commit -m "descriptions"
+git branch -M (name)
+git git remote add origin https: https://github.com/rizzaesh/complex_project.git
+git push origin master or main
+
+git remote -v
+you will see origin and heroku
+
+
+git branch -a
+git clone --branch <branchname> <remote-repo-url>
+
+to set password first migrate then creatsuperuser
+
+On heroku
+heroku create name-of-ur=heroku
+git push heroku branch
