@@ -10,7 +10,9 @@ from django.views.decorators.csrf import csrf_exempt
 
 def i(request):
     # HttpResponse(request,"hello")
-    word = pd.read_csv('\k1\static\word.csv')
+    try:
+        word = pd.read_csv('.\staticfiles\word.csv')
+    except:    word = pd.read_csv('staticfiles\word.csv')
     word = word[["word","mean","syn"]]
     wordsample = word.sample(10)
     words = list(wordsample['word'])
