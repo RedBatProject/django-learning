@@ -1,20 +1,14 @@
-import re
 from django.shortcuts import render
-from django.http import HttpResponse
-import time
-import threading
 import pandas as pd
 # Create your views here.
 from django.views.decorators.csrf import csrf_exempt
 @csrf_exempt
 
 def i(request):
-    # HttpResponse(request,"hello")
-    try:
-        word = pd.read_csv('.\staticfiles\word.csv')
-    except:    word = pd.read_csv('staticfiles\word.csv')
+    data2 = pd.read_csv('https://github.com/rizzaesh/django-learning/blob/master/word.csv?raw=1')
+    word = data2.drop('Unnamed: 0',axis=1)
     word = word[["word","mean","syn"]]
-    wordsample = word.sample(10)
+    wordsample = word.sample(20)
     words = list(wordsample['word'])
     means = list(wordsample['mean'])
     syns = list(wordsample['syn'])
